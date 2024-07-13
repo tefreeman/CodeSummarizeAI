@@ -2,8 +2,17 @@
 
 This project is designed to automatically analyze, embed, and summarize code files within a specified project directory. It leverages NLP models to generate meaningful summaries for individual files and subsequently constructs an overall summary of the project.
 
+## AI Models Used
+
+- **RAG (Embeddings):** Utilizes `nomic-ai nomic-embed-text-v1.5-GGUF` for generating embeddings.
+- **Code Summarization:** Employs `meta llama 3 7B` for summarizing code files.
+- **Summarizations to GitHub README:** Uses `chatgpt-4o` to create comprehensive summaries for inclusion in the GitHub README.
+
 ## Features
 
+---
+
+Would you like any modifications or additions to this section?
 - **Section Extraction:** Extracts relevant sections from Python and TypeScript files (e.g., class definitions, function definitions).
 - **Embedding Computation:** Creates embeddings for code sections and files using specified AI models.
 - **Contextual Similarity:** Determines the most relevant contexts within the project using cosine similarity of embeddings.
