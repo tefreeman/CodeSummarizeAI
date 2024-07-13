@@ -1,0 +1,9 @@
+Here is a concise summary of the code content in the file `app-routing.module.ts`:
+
+The file defines an Angular routing module for the application. It imports the necessary modules and components, including `AppComponent`, `LandingModule`, and `MainModule`. The `routes` constant defines three routes:
+
+1. An empty path that loads the `AppComponent`.
+2. A `/start` path that loads the `LandingModule`.
+3. A `/main` path that loads the `MainModule`.
+
+The `AppRoutingModule` module exports the `RouterModule` with the defined routes.

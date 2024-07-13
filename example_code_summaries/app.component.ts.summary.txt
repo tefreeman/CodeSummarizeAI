@@ -1,0 +1,10 @@
+Here is a summary of the code content in app.component.ts:
+
+The file contains an Angular component, AppComponent, which is responsible for initializing the application.
+
+* The component imports necessary services: AuthService, Platform, SplashScreen, and StatusBar.
+* It has a constructor that injects these services and initializes the application using the initializeApp method.
+* The initializeApp method sets up the platform, hides the splash screen, and sets the status bar style.
+* It also calls the redirectUser method, which checks if the user is logged in using the AuthService. If the user is logged in, it navigates to the "/main" route; otherwise, it navigates to the "/start" route.
+
+The component does not contain any template code, as it is a container component that initializes the application and redirects the user to the appropriate route.

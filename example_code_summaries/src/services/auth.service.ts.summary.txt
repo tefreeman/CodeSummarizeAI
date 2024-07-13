@@ -1,0 +1,17 @@
+Here is a summary of the code content in auth.service.ts:
+
+The AuthService is an Angular service responsible for handling authentication and authorization. It provides methods for creating a new user, signing in with email and password, signing in with Google, Facebook, or Twitter, resetting a password, and signing out.
+
+The service uses Firebase Authentication to interact with the Firebase backend. It also uses the Firestore database to store and retrieve user data.
+
+The methods in this service are:
+
+* `emailSignUp`: Creates a new user with an email and password.
+* `emailLogin`: Signs in a user with an email and password.
+* `googleLogin`, `FacebookLogin`, `TwitterLogin`: Signs in a user with their Google, Facebook, or Twitter account.
+* `oAuthLogin`: A helper method that signs in a user with an OAuth provider.
+* `resetPassword`: Resets a user's password.
+* `signOut`: Signs out the current user.
+* `isLoggedIn`: Returns a promise that resolves to a boolean indicating whether the user is logged in.
+
+The service also has a constructor that takes four dependencies: `FireStoreDataService`, `AngularFireAuth`, `AngularFirestore`, and `Router`.

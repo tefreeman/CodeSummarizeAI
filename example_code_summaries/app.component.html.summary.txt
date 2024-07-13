@@ -1,0 +1,9 @@
+The file "app.component.html" contains the following code:
+
+```
+<ion-app>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>
+```
+
+This code defines an Ionic app with a single router outlet, which is used to render the current route.

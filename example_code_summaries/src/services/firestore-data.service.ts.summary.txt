@@ -1,0 +1,10 @@
+Here is a summary of the code content in `firestore-data.service.ts`:
+
+* The service is injected with `AngularFireAuth`, `AngularFirestore`, and `Router`.
+* It defines an interface `User` with properties `uid`, `email`, `photoURL`, `displayName`, and `favoriteColor`.
+* It defines an observable `user` that retrieves the current user's data from Firebase Authentication and Firestore.
+* The service has three methods:
+	+ `updateUserData(user)`: updates the user's data in Firestore on login.
+	+ `getPlacesDB(id)`: retrieves a collection of places from Firestore based on an ID.
+	+ `getUser()`: returns the current user's data.
+* The service uses `switchMap` and `first` operators to handle authentication state changes and retrieve the user's data.
