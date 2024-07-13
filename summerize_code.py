@@ -286,6 +286,7 @@ if __name__ == "__main__":
     )
 
     # Local model for generating summaries of text
+    # llama 3 7B is a very good model for summarizing code
     local_client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")
 
     process_folder(target, output_dir)
