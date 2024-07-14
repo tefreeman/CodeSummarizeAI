@@ -1,18 +1,15 @@
 # Code Summarizer Project
 
-This project is designed to automatically analyze, embed, and summarize code files within a specified project directory. It leverages NLP models to generate meaningful summaries for individual files and subsequently constructs an overall summary of the project.
+This project is designed to automatically analyze, embed, and summarize code files within a specified project directory. Leveraging advanced NLP models, it generates meaningful summaries for individual files and constructs a comprehensive overall summary of the project.
 
 ## AI Models Used
 
-- **RAG (Embeddings):** Utilizes `nomic-ai nomic-embed-text-v1.5-GGUF` for generating embeddings.
-- **Code Summarization:** Employs `meta llama 3 7B` for summarizing code files.
-- **Summarizations to GitHub README:** Uses `chatgpt-4o` to create comprehensive summaries for inclusion in the GitHub README.
+- **Embeddings:** Utilizes `bge-large-en-v1.5` BERT model for generating embeddings.
+- **Code Summarization:** Employs `Llama 3 8B` for summarizing code files.
+- **Final README Generation:** Uses `ChatGPT-4` to create detailed summaries for inclusion in the GitHub README.
 
 ## Features
 
----
-
-Would you like any modifications or additions to this section?
 - **Section Extraction:** Extracts relevant sections from Python and TypeScript files (e.g., class definitions, function definitions).
 - **Embedding Computation:** Creates embeddings for code sections and files using specified AI models.
 - **Contextual Similarity:** Determines the most relevant contexts within the project using cosine similarity of embeddings.
@@ -22,21 +19,17 @@ Would you like any modifications or additions to this section?
 ## Project Workflow
 
 1. **File and Section Extraction:**
-
    - Files with extensions `.html`, `.py`, and `.ts` (excluding `.spec.ts`) are scanned within the specified directory.
    - Python and TypeScript files have their relevant sections extracted using Tree-sitter-based parsers.
 
 2. **Embedding and Similarity Calculation:**
-
    - Text embeddings are calculated for each file and its sections using cached embeddings for efficiency.
    - Cosine similarity is computed to identify and prioritize the most relevant sections across files.
 
 3. **Summarization of Individual Files:**
-
-   - Each file is summarized using GPT-based local models, incorporating additional relevant contexts from the project.
+   - Each file is summarized using Llama 3 8B, incorporating additional relevant contexts from the project.
 
 4. **Question Generation and Answering:**
-
    - Summaries of individual files are used to generate questions to deepen the understanding of the project.
    - Users can provide answers to these generated questions to enrich the final project summary.
 
@@ -55,7 +48,7 @@ Would you like any modifications or additions to this section?
 ## Setup
 
 1. **Install Dependencies:**
-   Make sure you install the necessary libraries via pip:
+   Install the necessary libraries via pip:
 
    ```bash
    pip install -r requirements.txt
@@ -76,7 +69,7 @@ Would you like any modifications or additions to this section?
    Run the script to process the target folder and generate summaries.
 
    ```bash
-   python summerize_code.py
+   python summarize_code.py
    ```
 
 2. **Generate and Answer Questions:**
@@ -89,7 +82,7 @@ Would you like any modifications or additions to this section?
 
 To use the summarization functionality within another script or for different projects:
 
-1. Import the necessary functions from `summerize_code.py`.
+1. Import the necessary functions from `summarize_code.py`.
 2. Call `process_folder` to generate summaries for a new project directory.
 3. Follow the prompts to generate a comprehensive project overview.
 
