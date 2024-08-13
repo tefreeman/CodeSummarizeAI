@@ -1,0 +1,3 @@
+class LanguageBase:
+    def extract:
+    

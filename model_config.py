@@ -11,6 +11,7 @@ LOCAL_AI_BASE_URL = "http://localhost:1234/v1"
 LOCAL_AI_API_KEY = "lm-studio"
 
 # Models Configuration
-EMBEDDING_MODEL = "CompendiumLabs/bge-large-en-v1.5-gguf"
+#EMBEDDING_MODEL = "CompendiumLabs/bge-large-en-v1.5-gguf"
+EMBEDDING_MODEL = "nomic-ai/nomic-embed-text-v1.5-GGUF"
 CHAT_MODEL = "SanctumAI/Meta-Llama-3-8B-Instruct-GGUF"
 SUMMARIZATION_MODEL = "gpt-4o"

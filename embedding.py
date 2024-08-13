@@ -39,11 +39,14 @@ class EmbeddingModel:
         sections = extract_nodes(tree.root_node, [])
         return [section.strip() for section in sections if len(section.strip()) > 50]
 
+
     def extract_typescript_sections(self, content):
         parser = get_parser('typescript')
         tree = parser.parse(bytes(content, "utf8"))
         def extract_nodes(node, acc):
-            if node.type in ['class_declaration', 'function_declaration', 'method_definition']:
+            # ['class_declaration', 'function_declaration', 'method_definition']
+            #if node.type in ['class_declaration', 'function_declaration', 'method_definition']:
+            if True:
                 acc.append(content[node.start_byte:node.end_byte])
             for child in node.children:
                 extract_nodes(child, acc)
@@ -122,3 +125,6 @@ class EmbeddingModel:
                     proj_embeddings.append(embedding)
         
         return proj_files, proj_embeddings
+    
+
+
